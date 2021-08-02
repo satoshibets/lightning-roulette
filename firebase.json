@@ -3,15 +3,18 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "functions": {},
+  "functions": {
+    "source": "functions"
+  },
   "hosting": {
-    "public": "build",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "/spin",
-        "function": "spin"
-      }
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
